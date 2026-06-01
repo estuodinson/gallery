@@ -48,6 +48,49 @@ nav ul li a:hover{
     color:#60a5fa;
 }
 
+/* HAMBURGER MENU */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+
+/* MOBILE NAVBAR */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:row;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav ul{
+        position:absolute;
+        top:75px;
+        right:8%;
+        width:200px;
+        background:rgba(15,23,42,.95);
+        backdrop-filter:blur(12px);
+        border-radius:15px;
+        padding:15px;
+        flex-direction:column;
+        gap:15px;
+        display:none;
+        box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    nav ul.show{
+        display:flex;
+    }
+
+    nav ul li{
+        text-align:center;
+    }
+}
+
 /* MAIN */
 .container{
     padding:40px 8%;
