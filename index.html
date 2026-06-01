@@ -473,7 +473,12 @@ footer p{
 <nav>
     <div class="logo">📸 Gallery Story</div>
 
-    <ul>
+    <!-- tombol hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -710,6 +715,15 @@ lightbox.onclick=(e)=>{
         lightbox.style.display='none';
     }
 }
+</script>
+
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+});
 </script>
 
 </body>
