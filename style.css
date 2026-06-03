@@ -210,10 +210,10 @@ footer p{
 
 @media(max-width:900px){
 
-    nav{
+    /* nav{
         flex-direction:column;
         gap:15px;
-    }
+    } */
 
     nav ul{
         gap:15px;
@@ -279,7 +279,7 @@ footer p{
     font-size:14px;
 }
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
     .footer{
         text-align:center;
@@ -287,6 +287,44 @@ footer p{
 
     .footer-box a:hover{
         transform:none;
+    }
+} */
+
+/* MOBILE NAVBAR */
+@media(max-width:768px){
+
+    nav{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        position:relative;
+        padding:18px 8%;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:32px;
+        cursor:pointer;
+        color:white;
+    }
+
+    nav ul{
+        position:absolute;
+        top:75px;
+        right:20px;
+        width:200px;
+        background:rgba(15,23,42,.95);
+        backdrop-filter:blur(12px);
+        border-radius:15px;
+        padding:18px;
+        display:none;
+        flex-direction:column;
+        gap:15px;
+        box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    nav ul.show{
+        display:flex;
     }
 }
 
