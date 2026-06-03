@@ -291,14 +291,21 @@ footer p{
 } */
 
 /* MOBILE NAVBAR */
+/* MOBILE NAVBAR */
 @media(max-width:768px){
 
     nav{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
         display:flex;
         justify-content:space-between;
         align-items:center;
-        position:relative;
         padding:18px 8%;
+        background:rgba(15,23,42,.92);
+        backdrop-filter:blur(12px);
+        z-index:1000;
     }
 
     .menu-toggle{
@@ -306,14 +313,15 @@ footer p{
         font-size:32px;
         cursor:pointer;
         color:white;
+        z-index:1001;
     }
 
     nav ul{
-        position:absolute;
+        position:fixed;
         top:75px;
         right:20px;
         width:200px;
-        background:rgba(15,23,42,.95);
+        background:rgba(15,23,42,.97);
         backdrop-filter:blur(12px);
         border-radius:15px;
         padding:18px;
@@ -321,6 +329,7 @@ footer p{
         flex-direction:column;
         gap:15px;
         box-shadow:0 10px 25px rgba(0,0,0,.35);
+        z-index:999;
     }
 
     nav ul.show{
@@ -329,6 +338,11 @@ footer p{
 
     nav ul li{
         text-align:center;
+    }
+
+    /* biar konten tidak ketutup navbar */
+    body{
+        padding-top:85px;
     }
 
     .home-content{
